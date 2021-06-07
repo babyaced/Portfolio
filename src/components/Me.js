@@ -4,6 +4,18 @@ import emailjs from 'emailjs-com';
 
 import styles from './Me.module.css';
 
+import GithubIcon from '../assets/logos/icons8-github.svg'
+
+import LinkedInIcon from '../assets/logos/icons8-linkedin.svg'
+
+import TwitterIcon from '../assets/logos/icons8-twitter.svg'
+
+import CodepenIcon from '../assets/logos/icons8-codepen.svg'
+
+
+
+
+
 function Me() {
 
     function sendEmail(e) {
@@ -20,25 +32,35 @@ function Me() {
       return (
         <div className={styles.me}>
             <div className={styles.about}>
-                <h1>Daniel Simpson</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eos dicta culpa. Sunt autem doloremque dolorum officiis maxime sequi pariatur ab quisquam, vel natus esse culpa placeat qui, veritatis at?</p>
+                <div className={styles.aboutMe}>
+                    <h1>Daniel Simpson</h1>
+                    <p>Hi I'm a web developer who likes making beautiful and functional web applications. Check out some of my projects</p>
+                </div>
+                <ul className={styles.socialLinks}>
+                    <li>
+                        <img src={GithubIcon} alt=""/>
+                    </li>
+                    <li>
+                        <img src={LinkedInIcon} alt=""/>
+                    </li>
+                    <li>
+                        <img src={CodepenIcon} alt=""/>
+                    </li>
+                    <li>
+                        <img src={TwitterIcon} alt=""/>
+                    </li>
+                </ul>
             </div>
             
             <form className={styles.contact} onSubmit={sendEmail}>
-                <h1>Contact Me</h1>
+                <h2>Contact Me</h2>
                 <input type="hidden" name="contact_number" />
-                <div>
-                    <label>Name</label>
-                    <input className= "name-input" type="text" name="user_name" placeholder="Name" />
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input className= "email-input" type="email" name="user_email" placeholder="Email" />
-                </div>
-                <div>
-                    <label>Message</label>
-                    <textarea className="message-input" name="message" placeholder="Message" />
-                </div>
+                <label>Name</label>
+                <input className= "name-input" type="text" name="user_name" placeholder="Name" />
+                <label>Email</label>
+                <input className= "email-input" type="email" name="user_email" placeholder="Email" />
+                <label>Message</label>
+                <textarea className="message-input" name="message" placeholder="Message" />
                 <input type="submit" value="Send"  className="submit-button"/>
             </form>
         </div>

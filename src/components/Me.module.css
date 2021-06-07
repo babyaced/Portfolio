@@ -13,3 +13,58 @@
     margin-left: 2%;
     padding: 1rem;
 }
+
+.aboutMe p::after{
+    content: " on your right";
+}
+
+.contact{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.contact h1,
+.contact label,
+.contact input,
+.contact textarea{
+    flex-basis: 100%;
+    resize: none;
+}
+
+.contact input,
+.contact textarea{
+    border-radius: 3px;
+    border-style: solid;
+}
+
+.about{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+
+.socialLinks{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.socialLinks li{
+
+    display: flex;
+}
+
+.socialLinks li img{
+    margin: 0;
+    padding: 0;
+    width: 48px;
+    margin-right: 1rem;
+}
+
+.contact h1{
+    margin-bottom: 0;
+}
+
+

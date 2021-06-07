@@ -1,30 +1,57 @@
 .musicPlayerCard{
     box-shadow: var(--elevation-1);
     border-radius: 3px;
-    background-image: url(../assets/images/SwiftMusic1.PNG);
-    background-position: left top;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
-.musicPlayerCard h1{
-    /* background-color: var(--color-neutral-100); */
-    background-color: rgba(238, 240, 247, 0.95);
-    line-height: 4rem;
-    margin-top: 0;
-    padding-left: 1rem;
-    color: var(--color-neutral-500);
-    backdrop-filter: blur(2px);
-}
-
-.musicPlayerCard p{
-    background-color: rgba(238, 240, 247, 0.8);
-}
-
-.musicPlayerCard ul{
+.techStack{
     list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0.5rem;
+    margin-bottom: 0;
+    min-height: 80px;
+}
+
+.techStack li{
+    margin: 0;
+    padding: 0;
     display: flex;
 }
 
-.musicPlayerCard ul li{
+.techStack li img{
     margin: 0;
     padding: 0;
+    width: 48px;
+    margin-right: 1rem;
+}
+
+.techStack{
+    background-color: rgba(238, 240, 247, 0.95);
+}
+
+.musicPlayerCardHeader{
+    display: flex;
+    background-color: rgba(238, 240, 247, 0.95);
+    margin-top: 0;
+    padding: 0 1rem;
+    color: var(--color-neutral-500);
+    backdrop-filter: blur(2px);
+    align-items: center;
+    justify-content: space-between;
+}
+
+@supports(backdrop-filter: blur(2px)){
+
+    .musicPlayerCardHeader{
+        backdrop-filter: blur(5px);
+        background-color: rgba(238, 240, 247, 0.8);
+    }
+
+    .techStack{
+        backdrop-filter: blur(5px);
+        background-color: rgba(238, 240, 247, 0.8);
+    }
 }
