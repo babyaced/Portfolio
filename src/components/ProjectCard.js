@@ -1,11 +1,11 @@
 import React from 'react'
 
-import styles from './MusicPlayer.module.css'
+import styles from './ProjectCard.module.css'
 
 function ProjectCard({projectTitle, projectRepo, projectTechStack, style}) {
     return (
-        <article className={styles.musicPlayerCard} style={style}>
-            <div className={styles.musicPlayerCardHeader}>
+        <article className={styles.projectCard} style={style}>
+            <div className={styles.projectCardHeader}>
                 <h1>{projectTitle}</h1>
                 <a href={projectRepo} target="_blank">View Code</a>
             </div>

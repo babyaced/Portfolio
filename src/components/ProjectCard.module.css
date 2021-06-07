@@ -1,4 +1,4 @@
-.musicPlayerCard{
+.projectCard{
     box-shadow: var(--elevation-1);
     border-radius: 3px;
     display: flex;
@@ -32,7 +32,7 @@
     background-color: rgba(238, 240, 247, 0.95);
 }
 
-.musicPlayerCardHeader{
+.projectCardHeader{
     display: flex;
     background-color: rgba(238, 240, 247, 0.95);
     margin-top: 0;
