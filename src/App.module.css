@@ -1,0 +1,21 @@
+.app{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    height: 100vh;
+}
+
+.projects{
+    flex-basis: 70%;
+    overflow: auto;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem;
+}
+
+.projects article{
+    flex-basis: 48%;
+    margin-left: 2%;
+    height: 48%;
+    margin-top: 2%;
+}

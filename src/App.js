@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+//Import CSS
+import styles from './App.module.css';
+import './globalStyles.css';
+
+import Me from './components/Me.js'
+import Zooble from './components/Zooble';
+import YelpML from './components/YelpML';
+import MusicPlayer from './components/MusicPlayer';
+import FileSys from './components/FileSys';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.app}>
+      <Me/>
+      <div className={styles.projects}>
+        <Zooble/>
+        <MusicPlayer/>
+        <FileSys/>
+        <YelpML/>
+        <Zooble/>
+      </div>
     </div>
   );
 }

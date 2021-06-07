@@ -1,0 +1,4 @@
+.musicPlayerCard{
+    box-shadow: var(--elevation-1);
+    border-radius: 3px;
+}
