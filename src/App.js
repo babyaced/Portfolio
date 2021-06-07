@@ -51,7 +51,7 @@ function App() {
           />
           <ProjectCard 
             projectTitle={'Linux Virtual File System'} 
-            projectRepo={'https://github.com/babyaced/CSC648-Final-Project'} 
+            projectRepo={'https://github.com/CSC415-Fall2020/group-term-assignment-file-system-babyaced'} 
             projectTechStack={[CLogo, LinuxLogo]}
             style={{backgroundImage: `url(${FileSystemProjectScreenshot})`, backgroundPosition: '10% 0%'}}
           />

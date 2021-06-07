@@ -3,6 +3,7 @@
     flex-flow: row nowrap;
     width: 100vw;
     height: 100vh;
+    overflow: auto;
 }
 
 .projects{
@@ -15,7 +16,6 @@
 
 .projects article{
     flex-basis: 48%;
-    margin-left: 2%;
+    margin-right: 2%;
     height: 48%;
-    margin-bottom: 2%;
 }

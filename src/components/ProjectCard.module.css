@@ -4,6 +4,9 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .techStack{
