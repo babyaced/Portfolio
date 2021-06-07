@@ -19,8 +19,12 @@ function Me() {
     
       return (
         <div className={styles.me}>
-            <h1>Daniel Simpson</h1>
-            <form onSubmit={sendEmail}>
+            <div className={styles.about}>
+                <h1>Daniel Simpson</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eos dicta culpa. Sunt autem doloremque dolorum officiis maxime sequi pariatur ab quisquam, vel natus esse culpa placeat qui, veritatis at?</p>
+            </div>
+            
+            <form className={styles.contact} onSubmit={sendEmail}>
                 <h1>Contact Me</h1>
                 <input type="hidden" name="contact_number" />
                 <div>

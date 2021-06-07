@@ -1,4 +1,30 @@
 .musicPlayerCard{
     box-shadow: var(--elevation-1);
     border-radius: 3px;
+    background-image: url(../assets/images/SwiftMusic1.PNG);
+    background-position: left top;
+}
+
+.musicPlayerCard h1{
+    /* background-color: var(--color-neutral-100); */
+    background-color: rgba(238, 240, 247, 0.95);
+    line-height: 4rem;
+    margin-top: 0;
+    padding-left: 1rem;
+    color: var(--color-neutral-500);
+    backdrop-filter: blur(2px);
+}
+
+.musicPlayerCard p{
+    background-color: rgba(238, 240, 247, 0.8);
+}
+
+.musicPlayerCard ul{
+    list-style: none;
+    display: flex;
+}
+
+.musicPlayerCard ul li{
+    margin: 0;
+    padding: 0;
 }
