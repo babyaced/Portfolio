@@ -1,0 +1,33 @@
+.contact{
+    display: flex;
+    flex-flow: row wrap;
+    height: 64%;
+    overflow: auto;
+    flex-basis: 96%;
+    box-shadow: var(--elevation-1);
+    margin-left: 2%;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.contact h1,
+.contact label,
+.contact input,
+.contact textarea{
+    flex-basis: 100%;
+    resize: none;
+}
+
+.contact input,
+.contact textarea{
+    border-radius: 3px;
+    border-style: solid;
+}
+
+.contact textarea{
+    height: 50%;
+}
+
+.contact h1{
+    margin-bottom: 0;
+}

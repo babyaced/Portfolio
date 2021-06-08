@@ -2,7 +2,8 @@
 import styles from './App.module.css';
 import './globalStyles.css';
 
-import Me from './components/Me.js'
+import AboutMe from './components/AboutMe.js'
+import ContactMe from './components/ContactMe.js'
 import ProjectCard from './components/ProjectCard';
 
 
@@ -30,7 +31,8 @@ function App() {
   return (
     <div className={styles.app}>
       <div className={styles.me}>
-        <Me/>
+        <AboutMe/>
+        <ContactMe/>
       </div>
       <div className={styles.projects}>
           <ProjectCard 

@@ -12,14 +12,15 @@
 }
 
 .about{
-    height: 33%;
+    height: 34%;
     overflow: auto;
+    margin-bottom: 2%;
 }
 
 .contact{
     display: flex;
     flex-flow: row wrap;
-    height: 66%;
+    height: 64%;
     overflow: auto;
 }
 

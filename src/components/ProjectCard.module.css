@@ -8,6 +8,10 @@
     background-size: cover;
 }
 
+.projectCard:not(:first-child):not(:nth-child(2)){
+    margin-top: 2%;
+}
+
 .techStack{
     list-style: none;
     display: flex;
@@ -56,3 +60,4 @@
         background-color: rgba(238, 240, 247, 0.8);
     }
 }
+
