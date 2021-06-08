@@ -30,7 +30,7 @@ function Me() {
       }
     
       return (
-        <div className={styles.me}>
+        <>
             <div className={styles.about}>
                 <div className={styles.aboutMe}>
                     <h1>Daniel Simpson</h1>
@@ -63,7 +63,7 @@ function Me() {
                 <textarea className="message-input" name="message" placeholder="Message" />
                 <input type="submit" value="Send"  className="submit-button"/>
             </form>
-        </div>
+        </>
       )
 }
 

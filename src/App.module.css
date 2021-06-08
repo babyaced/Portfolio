@@ -1,21 +1,61 @@
 .app{
     display: flex;
-    flex-flow: row nowrap;
-    width: 100vw;
+    flex-flow: row wrap;
+    width: 100%;
     height: 100vh;
     overflow: auto;
+    padding: 1rem;
+}
+
+.me{
+    flex-basis: 33%;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .projects{
-    flex-basis: 70%;
+    flex-basis: 66%;
     overflow: auto;
     display: flex;
     flex-flow: row wrap;
-    padding: 2rem;
+    margin-left: 1%;
 }
 
 .projects article{
     flex-basis: 48%;
     margin-right: 2%;
     height: 48%;
+}
+
+@media (max-width: 1116px){
+    .app{
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .projects{
+        flex-basis: 96%;
+        margin: 1rem 2%;
+    }
+
+    .me{
+        flex-basis: 96%;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 1rem 2%;
+    }
+
+    .projects article{
+        height: auto;
+        overflow: hidden;
+        min-height: 300px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px){
+    .projects article{
+        height: auto;
+        flex-basis: 96%;
+    }
 }

@@ -7,7 +7,7 @@ function ProjectCard({projectTitle, projectRepo, projectTechStack, style}) {
         <article className={styles.projectCard} style={style}>
             <div className={styles.projectCardHeader}>
                 <h1>{projectTitle}</h1>
-                <a href={projectRepo} target="_blank">View Code</a>
+                <a href={projectRepo} target="_blank" rel="noreferrer">View Code</a>
             </div>
             <ul className={styles.techStack}>
                 {projectTechStack.map((logo) =>

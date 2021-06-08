@@ -4,7 +4,6 @@
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    overflow: auto;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -47,7 +46,6 @@
 }
 
 @supports(backdrop-filter: blur(2px)){
-
     .musicPlayerCardHeader{
         backdrop-filter: blur(5px);
         background-color: rgba(238, 240, 247, 0.8);
