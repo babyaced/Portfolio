@@ -12,6 +12,10 @@
     margin-top: 2%;
 }
 
+.projectCard:nth-child(even){
+    margin-right: 0;
+}
+
 .techStack{
     list-style: none;
     display: flex;
