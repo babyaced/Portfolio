@@ -43,25 +43,26 @@ function App() {
           <ProjectCard 
               projectTitle={'iOS Music Streaming App'} 
               projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
-              projectTechStack={[SwiftLogo,FirebaseLogo]}
+              projectTechStack={{'Swift':SwiftLogo,'Firebase': FirebaseLogo}}
               style={{backgroundImage: `url(${MusicPlayerProjectScreenshot})`, backgroundPosition: '10% 0%'}}
           />
           <ProjectCard 
               projectTitle={'Zooble: Pet Owner Social Media'} 
               projectRepo={'https://github.com/babyaced/CSC648-Final-Project'} 
-              projectTechStack={[ReactLogo, NodeJSLogo, MySQLLogo,AWSLogo,GoogleMapsLogo]}
+              projectTechStack={{'React':ReactLogo, 'Node.js':NodeJSLogo, 'MySQL': MySQLLogo,'Amazon Web Services': AWSLogo,'Google Maps API': GoogleMapsLogo}}
               style={{backgroundImage: `url(${ZoobleScreenshot})`, backgroundPosition: '70% 0%'}}
+              projectLink={"https://zooble.link"}
             />
             <ProjectCard 
               projectTitle={'Yelp Rating Predictor'} 
               projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
-              projectTechStack={[PythonLogo, ScikitLearnLogo, PandasLogo]}
+              projectTechStack={{'Python': PythonLogo,'Scikit Learn': ScikitLearnLogo,'Pandas': PandasLogo}}
               style={{backgroundImage: `url(${YelpProjectScreenshot})`, backgroundPosition: '70% 0%'}}
             />
             <ProjectCard 
               projectTitle={'Linux Virtual File System'} 
               projectRepo={'https://github.com/CSC415-Fall2020/group-term-assignment-file-system-babyaced'} 
-              projectTechStack={[CLogo, LinuxLogo]}
+              projectTechStack={{'C':CLogo, 'Linux':LinuxLogo}}
               style={{backgroundImage: `url(${FileSystemProjectScreenshot})`, backgroundPosition: '10% 0%'}}
             />
       </div>

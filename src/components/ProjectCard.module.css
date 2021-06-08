@@ -22,7 +22,7 @@
     flex-flow: row wrap;
     padding: 0.5rem;
     margin-bottom: 0;
-    height: 80px;
+    min-height: 80px;
 }
 
 .techStack li{
@@ -34,8 +34,27 @@
 .techStack li img{
     margin: 0;
     padding: 0;
-    width: 48px;
+    height: 48px;
     margin-right: 1rem;
+}
+
+.techStack li:last-of-type{
+    margin: auto 0.5rem auto auto;
+    background-color: var(--color-primary-500);
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+
+.techStack li:last-of-type:hover,
+.projectCardHeader a:hover
+{
+    background-color: var(--color-primary-400);
+}
+
+.techStack li:last-of-type a{
+    text-decoration: none;
+    color: var(--color-neutral-100);
+    cursor: pointer;
 }
 
 .techStack{
@@ -48,20 +67,27 @@
     margin-top: 0;
     padding: 0 1rem;
     color: var(--color-neutral-500);
-    backdrop-filter: blur(2px);
     align-items: center;
     justify-content: space-between;
 }
 
-@supports(backdrop-filter: blur(2px)){
-    .musicPlayerCardHeader{
-        backdrop-filter: blur(5px);
-        background-color: rgba(238, 240, 247, 0.8);
+.projectCardHeader a{
+    background-color: var(--color-primary-500);
+    padding: 0.5rem 1rem;
+    color: var(--color-neutral-100);
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+@supports(backdrop-filter: blur(5px)){
+    .projectCardHeader{
+        backdrop-filter: blur(2px);
+        background-color: rgba(238, 240, 247, 0.75);
     }
 
     .techStack{
-        backdrop-filter: blur(5px);
-        background-color: rgba(238, 240, 247, 0.8);
+        backdrop-filter: blur(2px);
+        background-color: rgba(238, 240, 247, 0.75);
     }
 }
 
