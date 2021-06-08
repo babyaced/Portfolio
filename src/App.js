@@ -27,12 +27,17 @@ import PandasLogo from './assets/logos/pandas_secondary.svg'
 import ScikitLearnLogo from './assets/logos/scikit-learn-logo-notext.png'
 import YelpProjectScreenshot from './assets/images/YelpProjectPic.png'
 
+import useWindowSize from './hooks/useWindowSize.js'
+
 function App() {
+
+  const windowSize = useWindowSize();
+
   return (
     <div className={styles.app}>
       <div className={styles.me}>
         <AboutMe/>
-        <ContactMe/>
+        {windowSize.width >= 1116 && <ContactMe/>}
       </div>
       <div className={styles.projects}>
           <ProjectCard 
@@ -60,6 +65,8 @@ function App() {
               style={{backgroundImage: `url(${FileSystemProjectScreenshot})`, backgroundPosition: '10% 0%'}}
             />
       </div>
+
+      {windowSize.width < 1116 && <ContactMe style={{margin: '1rem 2%'}}/>}
     </div>
   );
 }

@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 
 import styles from './ContactMe.module.css'
 
-function ContactMe() {
+function ContactMe({style}) {
 
     function sendEmail(e) {
         e.preventDefault();
@@ -18,7 +18,7 @@ function ContactMe() {
       }
 
     return (
-        <form className={styles.contact} onSubmit={sendEmail}>
+        <form className={styles.contact} onSubmit={sendEmail} style={style}>
             <h2>Contact Me</h2>
             <input type="hidden" name="contact_number" />
             <label>Name</label>
