@@ -22,6 +22,7 @@ import ZoobleScreenshot from './assets/images/image26.png'
 import CLogo from './assets/logos/C_Programming_Language.svg'
 import LinuxLogo from './assets/logos/icons8-linux-96.png'
 import FileSystemProjectScreenshot from './assets/images/FileSystem.png'
+import FileSystemDemo from './assets/videos/FileSystemDemo.mp4'
 
 import PythonLogo from './assets/logos/icons8-python.svg'
 import PandasLogo from './assets/logos/pandas_secondary.svg'
@@ -73,7 +74,7 @@ function App() {
                   projectRepo={'https://github.com/CSC415-Fall2020/group-term-assignment-file-system-babyaced'} 
                   projectTechStack={{'C':CLogo, 'Linux':LinuxLogo}}
                   style={{backgroundImage: `url(${FileSystemProjectScreenshot})`, backgroundPosition: '10% 0%'}}
-                  demoVideo={MusicPlayerDemo}
+                  demoVideo={FileSystemDemo}
                 />
           </div>
         </Route>
