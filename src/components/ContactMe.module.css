@@ -6,8 +6,10 @@
     flex-basis: 100%;
     box-shadow: var(--elevation-1);
     padding: 0 1rem;
-    border-radius: 3px;
+    border-radius: var(--border-radius-card);
     align-items: flex-start;
+    background-color: var(--color-neutral-300);
+    color: var(--color-neutral-100);
 }
 
 .contact h1,
@@ -20,16 +22,16 @@
 
 .contact input,
 .contact textarea{
-    border-radius: 3px;
+    border-radius: 7.5px;
     border-style: solid;
-    padding-left:0.5rem;
+    padding:0.25rem 0.5rem;
     font-family: var(--font-family-body);
 }
 
 .contact textarea{
     min-height: 200px;
-    
     padding:0.5rem;
+    overflow-y: auto;
 }
 
 .contact label{
@@ -43,8 +45,20 @@
     border: none;
     background-color: var(--color-primary-300);
     color: var(--color-neutral-100);
-    margin: 1rem 0 2rem auto;
+    margin: 1rem 0 1rem auto;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.contact input[type=submit]:hover{
+    color: white;
+    font-weight: 600;
+}
+
+@supports(backdrop-filter: blur(2px)){
+    .contact{
+        backdrop-filter: blur(2px);
+        background-color: rgba(84, 93, 116, .85);
+    }
 }

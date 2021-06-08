@@ -1,6 +1,6 @@
 .projectCard{
     box-shadow: var(--elevation-1);
-    border-radius: 3px;
+    border-radius: var(--border-radius-card);
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -42,7 +42,7 @@
 .projectCard a{
     background-color: var(--color-primary-200);
     padding: 0.5rem 1rem;
-    border-radius: 3px;
+    border-radius: var(--border-radius-card);
     color: var(--color-neutral-500);
     text-decoration: none;
     box-shadow: var(--elevation-1);
@@ -67,6 +67,10 @@
 
 .techStack{
     background-color: rgba(238, 240, 247, 0.95);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: var(--border-radius-card);
+    border-bottom-right-radius: var(--border-radius-card);
 }
 
 .projectCardHeader{
@@ -77,9 +81,13 @@
     color: var(--color-neutral-500);
     align-items: center;
     justify-content: space-between;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: var(--border-radius-card);
+    border-top-left-radius: var(--border-radius-card);
 }
 
-@supports(backdrop-filter: blur(5px)){
+@supports(backdrop-filter: blur(2px)){
     .projectCardHeader{
         backdrop-filter: blur(2px);
         background-color: rgba(238, 240, 247, 0.75);

@@ -2,7 +2,9 @@
     flex-basis: 100%;
     box-shadow: var(--elevation-1);
     padding: 1rem;
-    border-radius: 3px;
+    border-radius: var(--border-radius-card);
+    background-color: var(--color-primary-400);
+    color: white;
 }
 
 .aboutMe p::after{
@@ -49,5 +51,13 @@
         content: " down below";
     }
 }
+
+@supports(backdrop-filter: blur(2px)){
+    .about{
+        backdrop-filter: blur(2px);
+        background-color: rgb(204, 211, 230, .75);
+    }
+}
+
 
 

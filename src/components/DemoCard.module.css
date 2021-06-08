@@ -1,0 +1,4 @@
+.demoCard{
+    height: 100%;
+    box-shadow: var(--elevation-1);
+}
