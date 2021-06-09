@@ -20,6 +20,14 @@
     resize: none;
 }
 
+.contact span{
+    margin-left: auto;
+    align-self: flex-end;
+    color: red;
+    font-weight: 600;
+    font-size: var(--text-sm)
+}
+
 .contact input,
 .contact textarea{
     flex-basis: 100%;
@@ -80,11 +88,4 @@
 
 .invalid {
     background-color: pink;
-}
-
-.nameLabelWrapper{
-    display: flex;
-    justify-content: space-between;
-    flex-basis: 100%;
-    align-items: flex-end;
 }

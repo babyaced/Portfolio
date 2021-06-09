@@ -116,24 +116,28 @@ function ContactMe({style}) {
             <form className={styles.contact} onSubmit={sendEmail} style={style}>
                 <h2>Contact Me</h2>
                 <div>
-                    <label for="name">Your Name</label>
+                    <label for="name">Your Name </label>
+                    <span>{nameError}</span>
                     {!nameError ? <input type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/> :  <input className={styles.invalid} type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>}
-                    {nameError}
+                    
                 </div>
                 <div>
                     <label for="email">Your Email</label>
+                    <span>{emailError}</span>
                     {!emailError ? <input type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/> : <input className={styles.invalid} type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/>}
-                    {emailError}
+                    
                 </div>
                 <div>
-                    <label for="subject">Subject</label>      
+                    <label for="subject">Subject</label>
+                    <span>{subjectError}</span> 
                     {!subjectError ? <input type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/> : <input className={styles.invalid} type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/>}
-                    {subjectError}
+                    
                 </div>
                 <div>
                     <label for="message">Message</label>
+                    <span>{messageError}</span>
                     {!messageError ? <textarea className="message-input" name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/> : <textarea className={styles.invalid} name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/>}
-                    {messageError}
+                    
                 </div>
                 <input type="submit" value="Send"  className="submit-button"/>
             </form>
