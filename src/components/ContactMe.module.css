@@ -8,7 +8,8 @@
     padding: 0 1rem;
     border-radius: var(--border-radius-card);
     align-items: flex-start;
-    background-color: var(--color-neutral-300);
+    /* background-color: var(--color-neutral-300); */
+    background-color: rgba(84, 93, 116, .95);
     color: var(--color-neutral-100);
 }
 
@@ -56,9 +57,9 @@
     font-weight: 600;
 }
 
-@supports(backdrop-filter: blur(2px)){
+@supports(backdrop-filter: blur(3px)){
     .contact{
-        backdrop-filter: blur(2px);
-        background-color: rgba(84, 93, 116, .95);
+        backdrop-filter: blur(3px);
+        
     }
 }

@@ -87,14 +87,14 @@
     border-top-left-radius: var(--border-radius-card);
 }
 
-@supports(backdrop-filter: blur(2px)){
+@supports(backdrop-filter: blur(3px)){
     .projectCardHeader{
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(3px);
         background-color: rgba(238, 240, 247, 0.75);
     }
 
     .techStack{
-        backdrop-filter: blur(2px);
+        backdrop-filter: blur(3px);
         background-color: rgba(238, 240, 247, 0.75);
     }
 }

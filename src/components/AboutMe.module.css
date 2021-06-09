@@ -3,7 +3,8 @@
     box-shadow: var(--elevation-1);
     padding: 1rem;
     border-radius: var(--border-radius-card);
-    background-color: var(--color-primary-400);
+    /* background-color: var(--color-primary-400); */
+    background-color: rgb(69, 89, 140, .95);
     color: white;
 }
 
@@ -52,11 +53,9 @@
     }
 }
 
-@supports(backdrop-filter: blur(2px)){
+@supports(backdrop-filter: blur(3px)){
     .about{
-        backdrop-filter: blur(2px);
-        background-color: rgb(44, 75, 156, .95);
-        
+        backdrop-filter: blur(3px);
     }
 }
 
