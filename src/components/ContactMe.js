@@ -21,20 +21,20 @@ function ContactMe({style}) {
         <form className={styles.contact} onSubmit={sendEmail} style={style}>
             <h2>Contact Me</h2>
             <div>
-                <label>Your Name</label>
-                <input className= "name-input" type="text" name="user_name" placeholder="Name" />
+                <label for="name">Your Name</label>
+                <input className= "name-input" type="text" name="name" placeholder="Name" id="name"/>
             </div>
             <div>
-                <label>Your Email</label>
-                <input className= "email-input" type="email" name="user_email" placeholder="Email" />
+                <label for="email">Your Email</label>
+                <input className= "email-input" type="email" name="email" placeholder="Email" id="email"/>
             </div>
             <div>
-                <label>Subject</label>
-                <input className= "subject-input" type="text" name="subject" placeholder="Subject" />
+                <label for="subject">Subject</label>
+                <input className= "subject-input" type="text" name="subject" placeholder="Subject" id="subject"/>
             </div>
             <div>
-                <label>Message</label>
-                <textarea className="message-input" name="message" placeholder="Message" />
+                <label for="message">Message</label>
+                <textarea className="message-input" name="message" placeholder="Message" id="message"/>
             </div>
             <input type="submit" value="Send"  className="submit-button"/>
         </form>
