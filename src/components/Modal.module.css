@@ -1,0 +1,90 @@
+.modal {
+    position: fixed;
+    top: 300vh;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    background-color: var(--color-neutral-100);
+    box-shadow: var(--elevation-10);
+    border-radius: 7.5px;
+    overflow: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding: 0 0 1rem 1rem;
+    transition: .25s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 300px;
+}
+
+.modalVisible{
+    transform: translate(-50%,-260vh);
+    z-index: 4;
+}
+  
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: .5s ease-in-out;
+    z-index: -1;
+}
+
+.overlayVisible{
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
+  
+.exitButton {
+    border: none;
+    cursor: pointer;
+    transition: 0.15s ease-in-out;
+    background-color: none;
+}
+
+.exitButton:hover {
+    opacity: 0.75;
+}
+
+@supports(backdrop-filter: blur(10px)){
+
+    .overlayVisible{
+        backdrop-filter: blur(10px);
+    }
+}
+
+.modalHeading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal p{
+    padding-right: 1rem;
+}
+
+.okButton{
+    background-color: var(--color-primary-200);
+    font-size: var(--h4);
+    padding: .5rem 1rem;
+    border: none;
+    border-radius: 7.5px;
+    text-align: center;
+    cursor: pointer;
+    transition: .25s ease-in-out;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.okButton:hover{
+    background-color: var(--color-primary-100);
+}
+
+@media (max-width: 450px){
+    .modal{
+        min-width: 90%;
+    }
+}
