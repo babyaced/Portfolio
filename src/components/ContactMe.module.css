@@ -59,6 +59,6 @@
 @supports(backdrop-filter: blur(2px)){
     .contact{
         backdrop-filter: blur(2px);
-        background-color: rgba(84, 93, 116, .85);
+        background-color: rgba(84, 93, 116, .95);
     }
 }

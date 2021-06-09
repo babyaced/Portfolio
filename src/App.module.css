@@ -5,9 +5,9 @@
     height: 100vh;
     overflow: auto;
     padding: 1rem;
-    background-image: url(./assets/images/PatternBackground.jpg);
-    background-repeat: repeat;
-    background-size: 70%;
+    background-image: url(./assets/images/blob-scatter-haikei.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .me{
