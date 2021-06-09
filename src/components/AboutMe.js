@@ -20,16 +20,16 @@ function AboutMe() {
                 </div>
                 <ul className={styles.socialLinks}>
                     <li>
-                        <img src={GithubIcon} alt=""/>
+                        <a href="https://github.com/babyaced" target="_blank" rel="noopener noreferrer"><img src={GithubIcon} alt=""/></a>
                     </li>
                     <li>
-                        <img src={LinkedInIcon} alt=""/>
+                        <a href="https://www.linkedin.com/in/daniel-simpson-975536129/" target="_blank" rel="noopener noreferrer"><img src={LinkedInIcon} alt=""/></a>
                     </li>
                     <li>
-                        <img src={CodepenIcon} alt=""/>
+                        <a href="https://codepen.io/babyaced" target="_blank" rel="noopener noreferrer"><img src={CodepenIcon} alt=""/></a>
                     </li>
                     <li>
-                        <img src={TwitterIcon} alt=""/>
+                        <a href="https://twitter.com/baby_aced" target="_blank" rel="noopener noreferrer"><img src={TwitterIcon} alt=""/></a>
                     </li>
                 </ul>
             </div>
