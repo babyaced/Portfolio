@@ -23,12 +23,22 @@ function ContactMe({style}) {
     function sendEmail(e) {
         e.preventDefault();
 
-        setSendMessageSuccess(true);
-        setModalDisplay(true);
+
 
         const isValid = validate();
 
         if(isValid){
+            emailjs.sendForm('service_sjqmf2m', 'template_dzvrpnq', e.target, 'user_0Znqwgyp7svJTtgKIL4gz')
+            .then((result) => {
+                console.log(result.text);
+                setSendMessageSuccess(true);
+                setModalDisplay(true);
+            }, (error) => {
+                console.log(error.text);
+                setSendMessageSuccess(false);
+                setModalDisplay(true);
+            });
+
             setName('');
             setEmail('');
             setSubject('');
@@ -37,21 +47,9 @@ function ContactMe({style}) {
             setEmailError('');
             setSubjectError('');
             setMessageError('');
-        // emailjs.sendForm('service_sjqmf2m', 'template_dzvrpnq', e.target, 'user_0Znqwgyp7svJTtgKIL4gz')
-        //   .then((result) => {
-        //       console.log(result.text);
-        //       setSendMessageSuccess(true);
-        //       setModalDisplay(true);
-        //   }, (error) => {
-        //       console.log(error.text);
-        //       setSendMessageSuccess(false);
-        //       setModalDisplay(true);
-        //   });
-
-        //clear form
         }
         else{
-
+            return
         }
 
     }
@@ -62,12 +60,14 @@ function ContactMe({style}) {
         let subjectErr = "";
         let messageErr = "";
 
+        console.log("name: ", name);
+
         if (!name){
             nameErr = "Please enter a Name"
         }
 
         if (!email){
-            nameErr = "Please enter a Name"
+            emailErr = "Please enter a Email"
         }
 
         if (!subject){
@@ -124,7 +124,7 @@ function ContactMe({style}) {
                 <div>
                     <label for="email">Your Email</label>
                     <span>{emailError}</span>
-                    {!emailError ? <input type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/> : <input className={styles.invalid} type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/>}
+                    {!emailError ?  <input type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/> : <input className={styles.invalid} type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/>}
                     
                 </div>
                 <div>
