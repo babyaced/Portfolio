@@ -30,6 +30,15 @@
     --elevation-10: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.20);
 
     --border-radius-card: 7.5px;
+
+    --base-size: 1em;
+    --type-scale: 1.125;
+    --h5: calc(var(--base-size) * var(--type-scale));
+    --h4: calc(var(--h5) * var(--type-scale));
+    --h3: calc(var(--h4) * var(--type-scale));
+    --h2: calc(var(--h3) * var(--type-scale));
+    --h1: calc(var(--h2) * var(--type-scale));
+    --text-sm: calc(var(--base-size) / var(--type-scale));
 }
 
 html{
@@ -42,16 +51,32 @@ html{
     box-sizing: inherit;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-family: var(--font-family-header);
-    font-weight: normal;
-}
+h1 {font-size: var(--h1);}
+  
+h2 {font-size: var(--h2);}
+
+h3 {font-size: var(--h3);}
+
+h4 {font-size: var(--h4);}
+
+h5 {font-size: var(--h5);}
+
 
 p{
-    font-family: var(--font-family-body);
+    font-size: var(--base-size);
+}
+
+small, .text-small {
+    font-size: var(--text-sm);
 }
 
 body{
     margin: 0;
     font-family: var(--font-family-body);
+}
+
+@media (max-width: 768px){
+    :root{
+        --base-size: .8em;
+    }
 }

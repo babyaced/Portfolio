@@ -13,7 +13,7 @@
     color: var(--color-neutral-100);
 }
 
-.contact h1,
+.contact h2,
 .contact label,
 .contact input,
 .contact textarea{
@@ -23,22 +23,36 @@
 
 .contact input,
 .contact textarea{
+    flex-basis: 100%;
     border-radius: 7.5px;
     border-style: solid;
     padding:0.25rem 0.5rem;
     font-family: var(--font-family-body);
+    font-size: var(--text-sm);
+}
+
+.contact div{
+    flex-basis: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.contact h2{
+    margin-bottom: 0;
 }
 
 .contact textarea{
-    min-height: 200px;
     padding:0.5rem;
     overflow-y: auto;
+    min-height: 200px;
 }
 
 .contact label{
     padding-top: 1rem;
+    line-height: var(--base-size);
 }
 
+/*Send Button*/
 .contact input[type=submit]{
     flex-basis: 33%;
     max-width: 200px;
@@ -48,7 +62,6 @@
     color: var(--color-neutral-100);
     margin: 1rem 0 1rem auto;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
     cursor: pointer;
 }
 
