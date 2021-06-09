@@ -14,7 +14,6 @@
 }
 
 .contact h2,
-.contact label,
 .contact input,
 .contact textarea{
     flex-basis: 100%;
@@ -30,6 +29,8 @@
     font-family: var(--font-family-body);
     font-size: var(--text-sm);
 }
+
+
 
 .contact div{
     flex-basis: 100%;
@@ -75,4 +76,15 @@
         backdrop-filter: blur(3px);
         
     }
+}
+
+.invalid {
+    background-color: pink;
+}
+
+.nameLabelWrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 100%;
+    align-items: flex-end;
 }

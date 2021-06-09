@@ -10,12 +10,33 @@ function ContactMe({style}) {
     const [modalDisplay, setModalDisplay] = useState(false)
     const [sendMessageSuccess, setSendMessageSuccess] = useState(false);
 
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [subject, setSubject] = useState('');
+    const [message, setMessage] = useState('');
+
+    const [nameError,setNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [subjectError, setSubjectError] = useState('');
+    const [messageError, setMessageError] = useState('');
+
     function sendEmail(e) {
         e.preventDefault();
 
         setSendMessageSuccess(true);
         setModalDisplay(true);
-    
+
+        const isValid = validate();
+
+        if(isValid){
+            setName('');
+            setEmail('');
+            setSubject('');
+            setMessage('');
+            setNameError('');
+            setEmailError('');
+            setSubjectError('');
+            setMessageError('');
         // emailjs.sendForm('service_sjqmf2m', 'template_dzvrpnq', e.target, 'user_0Znqwgyp7svJTtgKIL4gz')
         //   .then((result) => {
         //       console.log(result.text);
@@ -26,7 +47,69 @@ function ContactMe({style}) {
         //       setSendMessageSuccess(false);
         //       setModalDisplay(true);
         //   });
-      }
+
+        //clear form
+        }
+        else{
+
+        }
+
+    }
+
+    function validate(){
+        let nameErr = "";
+        let emailErr = "";
+        let subjectErr = "";
+        let messageErr = "";
+
+        if (!name){
+            nameErr = "Please enter a Name"
+        }
+
+        if (!email){
+            nameErr = "Please enter a Name"
+        }
+
+        if (!subject){
+            subjectErr = "Please enter a Subject"
+        }
+
+        if(!message){
+            messageErr = "Please enter a Message"
+        }
+
+        if(!email.includes('@')){
+            emailErr = 'Invalid Email';
+        }
+
+        if(nameErr){
+            console.log(nameErr)
+            setNameError(nameErr);
+            
+        }
+
+        if(messageErr){
+            console.log(messageErr)
+            setMessageError(messageErr);
+        }
+
+        if(subjectErr){
+            console.log(subjectErr)
+            setSubjectError(subjectErr);
+        }
+
+        if(emailErr){
+            console.log(emailErr)
+            setEmailError(emailErr);
+        }
+
+        if(nameErr || emailErr || subjectErr || messageErr){
+            return false;
+        }
+
+        console.log('no errors');
+        return true;
+    }
 
     return (
         <>
@@ -34,19 +117,23 @@ function ContactMe({style}) {
                 <h2>Contact Me</h2>
                 <div>
                     <label for="name">Your Name</label>
-                    <input className= "name-input" type="text" name="name" placeholder="Name" id="name" required/>
+                    {!nameError ? <input type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/> :  <input className={styles.invalid} type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>}
+                    {nameError}
                 </div>
                 <div>
                     <label for="email">Your Email</label>
-                    <input className= "email-input" type="email" name="email" placeholder="Email" id="email" required/>
+                    {!emailError ? <input type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/> : <input className={styles.invalid} type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/>}
+                    {emailError}
                 </div>
                 <div>
-                    <label for="subject">Subject</label>
-                    <input className= "subject-input" type="text" name="subject" placeholder="Subject" id="subject" required/>
+                    <label for="subject">Subject</label>      
+                    {!subjectError ? <input type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/> : <input className={styles.invalid} type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/>}
+                    {subjectError}
                 </div>
                 <div>
                     <label for="message">Message</label>
-                    <textarea className="message-input" name="message" placeholder="Message" id="message" required/>
+                    {!messageError ? <textarea className="message-input" name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/> : <textarea className={styles.invalid} name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/>}
+                    {messageError}
                 </div>
                 <input type="submit" value="Send"  className="submit-button"/>
             </form>
