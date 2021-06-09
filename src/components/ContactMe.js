@@ -20,7 +20,6 @@ function ContactMe({style}) {
     return (
         <form className={styles.contact} onSubmit={sendEmail} style={style}>
             <h2>Contact Me</h2>
-            <input type="hidden" name="contact_number" />
             <label>Name</label>
             <input className= "name-input" type="text" name="user_name" placeholder="Name" />
             <label>Email</label>
