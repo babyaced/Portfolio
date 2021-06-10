@@ -28,7 +28,7 @@ function ContactMe({style}) {
         const isValid = validate();
 
         if(isValid){
-            emailjs.sendForm('service_sjqmf2m', 'template_dzvrpnq', e.target, 'user_0Znqwgyp7svJTtgKIL4gz')
+            emailjs.sendForm(process.env.REACT_APP_EMAIL_JS_SERVICE_NAME, process.env.REACT_APP_EMAIL_JS_TEMPLATE_NAME, e.target, process.env.REACT_APP_EMAIL_JS_USER_NAME)
             .then((result) => {
                 console.log(result.text);
                 setSendMessageSuccess(true);
