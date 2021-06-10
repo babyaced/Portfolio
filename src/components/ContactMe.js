@@ -113,7 +113,7 @@ function ContactMe({style}) {
 
     return (
         <>
-            <form className={styles.contact} onSubmit={sendEmail} style={style}>
+            <form className={styles.contactMeForm} onSubmit={sendEmail} style={style}>
                 <h2>Contact Me</h2>
                 <div>
                     <label for="name">Your Name </label>

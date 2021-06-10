@@ -1,26 +1,16 @@
-.contact{
+.contactMeForm{
     display: flex;
     flex-flow: row wrap;
-    height: 64%;
-    overflow: hidden;
-    flex-basis: 100%;
-    box-shadow: var(--elevation-1);
-    padding: 0 1rem;
-    border-radius: var(--border-radius-card);
-    align-items: flex-start;
-    /* background-color: var(--color-neutral-300); */
-    background-color: rgba(84, 93, 116, .95);
-    color: var(--color-neutral-100);
 }
 
-.contact h2,
-.contact input,
-.contact textarea{
+.contactMeForm h2,
+.contactMeForm input,
+.contactMeForm textarea{
     flex-basis: 100%;
     resize: none;
 }
 
-.contact span{
+.contactMeForm span{
     margin-left: auto;
     align-self: flex-end;
     color: red;
@@ -28,8 +18,8 @@
     font-size: var(--text-sm)
 }
 
-.contact input,
-.contact textarea{
+.contactMeForm input,
+.contactMeForm textarea{
     flex-basis: 100%;
     border-radius: 7.5px;
     border-style: solid;
@@ -40,29 +30,29 @@
 
 
 
-.contact div{
+.contactMeForm div{
     flex-basis: 100%;
     display: flex;
     flex-flow: row wrap;
 }
 
-.contact h2{
+.contactMeForm h2{
     margin-bottom: 0;
 }
 
-.contact textarea{
+.contactMeForm textarea{
     padding:0.5rem;
     overflow-y: auto;
     min-height: 200px;
 }
 
-.contact label{
+.contactMeForm label{
     padding-top: 1rem;
     line-height: var(--base-size);
 }
 
 /*Send Button*/
-.contact input[type=submit]{
+.contactMeForm input[type=submit]{
     flex-basis: 33%;
     max-width: 200px;
     margin-left: auto;
@@ -74,13 +64,13 @@
     cursor: pointer;
 }
 
-.contact input[type=submit]:hover{
+.contactMeForm input[type=submit]:hover{
     color: white;
     font-weight: 600;
 }
 
 @supports(backdrop-filter: blur(3px)){
-    .contact{
+    .contactMeForm{
         backdrop-filter: blur(3px);
         
     }
@@ -88,10 +78,5 @@
 
 .invalid {
     background-color: #fddde6;
-}
-
-@media (max-width: 1116px){
-    .contact{
-        order: 2;
-    }
+    border: 2px solid red;
 }

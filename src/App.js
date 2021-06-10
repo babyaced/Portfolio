@@ -42,48 +42,49 @@ function App() {
   const windowSize = useWindowSize();
   return (
     <div className={styles.app}>
-      <ConditionalWrapper condition={windowSize.width >= 1116}>
+        <div className={styles.aboutMeWrapper}>
           <AboutMe/>
+        </div>
+        <div className={styles.contactMeWrapper}>
           <ContactMe/>
-      </ConditionalWrapper>
-          <div className={styles.projects}>
-            
-              <ProjectCard 
-                  projectTitle={'Zooble: Pet Owner Social Media'} 
-                  projectRepo={'https://github.com/babyaced/CSC648-Final-Project'} 
-                  projectTechStack={{'React':ReactLogo, 'Node.js':NodeJSLogo, 'MySQL': MySQLLogo,'Amazon Web Services': AWSLogo,'Google Maps API': GoogleMapsLogo}}
-                  style={{backgroundImage: `url(${ZoobleScreenshot})`, backgroundPosition: '70% 0%'}}
-                  projectLink={"https://zooble.link"}
-                />
-              <ProjectCard 
-                  projectTitle={'This Portfolio'} 
-                  projectRepo={'https://github.com/babyaced/Portfolio'} 
-                  projectTechStack={{'React':ReactLogo, 'CSS3':CSSLogo, 'HTML5': HTMLLogo}}
-                  style={{backgroundImage: `url(${PortfolioScreenshot})`, backgroundPosition: '70% 0%'}}
-                  projectLink={"https://danielsimpson.dev"}
-                />
-              <ProjectCard 
-                  projectTitle={'iOS Music Streaming App'} 
-                  projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
-                  projectTechStack={{'Swift':SwiftLogo,'Firebase': FirebaseLogo}}
-                  style={{backgroundImage: `url(${MusicPlayerProjectScreenshot})`, backgroundPosition: '10% 0%'}}
-                  demoVideo={MusicPlayerDemo}
+        </div>
+        <div className={styles.projects}>
+            <ProjectCard 
+                projectTitle={'Zooble: Pet Owner Social Media'} 
+                projectRepo={'https://github.com/babyaced/CSC648-Final-Project'} 
+                projectTechStack={{'React':ReactLogo, 'Node.js':NodeJSLogo, 'MySQL': MySQLLogo,'Amazon Web Services': AWSLogo,'Google Maps API': GoogleMapsLogo}}
+                style={{backgroundImage: `url(${ZoobleScreenshot})`, backgroundPosition: '70% 0%'}}
+                projectLink={"https://zooble.link"}
               />
-                <ProjectCard 
-                  projectTitle={'Yelp Rating Predictor'} 
-                  projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
-                  projectTechStack={{'Python': PythonLogo,'Scikit Learn': ScikitLearnLogo,'Pandas': PandasLogo}}
-                  style={{backgroundImage: `url(${YelpProjectScreenshot})`, backgroundPosition: '70% 0%'}}
-                  projectLink={'https://colab.research.google.com/drive/1emNLQCsPGKX0pdW_OKnPQqi_q3OWTMy2?usp=sharing'}
-                />
-                <ProjectCard 
-                  projectTitle={'Linux Virtual File System'} 
-                  projectRepo={'https://github.com/CSC415-Fall2020/group-term-assignment-file-system-babyaced'} 
-                  projectTechStack={{'C':CLogo, 'Linux':LinuxLogo}}
-                  style={{backgroundImage: `url(${FileSystemProjectScreenshot})`, backgroundPosition: '10% 0%'}}
-                  demoVideo={FileSystemDemo}
-                />
-          </div>
+            <ProjectCard 
+                projectTitle={'This Portfolio'} 
+                projectRepo={'https://github.com/babyaced/Portfolio'} 
+                projectTechStack={{'React':ReactLogo, 'CSS3':CSSLogo, 'HTML5': HTMLLogo}}
+                style={{backgroundImage: `url(${PortfolioScreenshot})`, backgroundPosition: '70% 0%'}}
+                projectLink={"https://danielsimpson.dev"}
+              />
+            <ProjectCard 
+                projectTitle={'iOS Music Streaming App'} 
+                projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
+                projectTechStack={{'Swift':SwiftLogo,'Firebase': FirebaseLogo}}
+                style={{backgroundImage: `url(${MusicPlayerProjectScreenshot})`, backgroundPosition: '10% 0%'}}
+                demoVideo={MusicPlayerDemo}
+            />
+              <ProjectCard 
+                projectTitle={'Yelp Rating Predictor'} 
+                projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
+                projectTechStack={{'Python': PythonLogo,'Scikit Learn': ScikitLearnLogo,'Pandas': PandasLogo}}
+                style={{backgroundImage: `url(${YelpProjectScreenshot})`, backgroundPosition: '70% 0%'}}
+                projectLink={'https://colab.research.google.com/drive/1emNLQCsPGKX0pdW_OKnPQqi_q3OWTMy2?usp=sharing'}
+              />
+              <ProjectCard 
+                projectTitle={'Linux Virtual File System'} 
+                projectRepo={'https://github.com/CSC415-Fall2020/group-term-assignment-file-system-babyaced'} 
+                projectTechStack={{'C':CLogo, 'Linux':LinuxLogo}}
+                style={{backgroundImage: `url(${FileSystemProjectScreenshot})`, backgroundPosition: '10% 0%'}}
+                demoVideo={FileSystemDemo}
+              />
+        </div>
       </div>
   );
 }

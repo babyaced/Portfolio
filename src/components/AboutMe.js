@@ -13,7 +13,7 @@ import CodepenIcon from '../assets/logos/icons8-codepen.svg'
 function AboutMe() {    
       return (
         <>
-            <div className={styles.about}>
+            
                 <div className={styles.aboutMe}>
                     <h1>Daniel Simpson</h1>
                     <p>Hi I'm a web developer who likes making beautiful and functional web applications. Check out some of my projects</p>
@@ -32,9 +32,6 @@ function AboutMe() {
                         <a href="https://twitter.com/baby_aced" target="_blank" rel="noopener noreferrer"><img src={TwitterIcon} alt=""/></a>
                     </li>
                 </ul>
-            </div>
-            
-
         </>
       )
 }
