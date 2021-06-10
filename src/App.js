@@ -29,17 +29,13 @@ import PandasLogo from './assets/logos/pandas_secondary.svg'
 import ScikitLearnLogo from './assets/logos/scikit-learn-logo-notext.png'
 import YelpProjectScreenshot from './assets/images/YelpProjectPic.png'
 
-import ConditionalWrapper from './components/ConditionalWrapper';
 
 import CSSLogo from './assets/logos/icons8-css3.svg'
 import HTMLLogo from './assets/logos/icons8-html-5.svg'
 import PortfolioScreenshot from './assets/images/PortfolioScreenshot.png'
 
-import useWindowSize from './hooks/useWindowSize.js'
 
 function App() {
-
-  const windowSize = useWindowSize();
   return (
     <div className={styles.app}>
         <div className={styles.aboutMeWrapper}>
