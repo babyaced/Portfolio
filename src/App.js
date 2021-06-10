@@ -33,6 +33,7 @@ import useWindowSize from './hooks/useWindowSize.js'
 
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import DemoCard from './components/DemoCard';
+import ConditionalWrapper from './components/ConditionalWrapper';
 
 function App() {
 
@@ -41,10 +42,10 @@ function App() {
   return (
     <BrowserRouter>
     <div className={styles.app}>
-      <div className={styles.me}>
-        <AboutMe/>
-        {windowSize.width >= 1116 && <ContactMe/>}
-      </div>
+      <ConditionalWrapper condition={windowSize.width >= 1116}>
+          <AboutMe/>
+          <ContactMe key="contactMeForm"/>
+      </ConditionalWrapper>
       <Switch>
         <Route exact path='/'>
           <div className={styles.projects}>
@@ -82,7 +83,7 @@ function App() {
           <DemoCard/>
         </Route>
         </Switch>
-        {windowSize.width < 1116 && <ContactMe style={{margin: '1rem 2%'}}/>}
+        {/* {windowSize.width < 1116 && <ContactMe style={{margin: '1rem 2%'}}/>} */}
       </div>
     </BrowserRouter>
   );

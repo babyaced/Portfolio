@@ -27,7 +27,7 @@
 }
 
 .projects article{
-    flex-basis: 48%;
+    flex-basis: 49%;
     margin-right: 2%;
     height: 48%;
 }
@@ -39,20 +39,11 @@
     }
 
     .projects{
-        flex-basis: 96%;
-        margin: 1rem 2%;
-    }
-
-    .me{
         flex-basis: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        margin: 1rem 2%;
-        height: 100%;
+        margin: 1rem 0;
     }
 
     .projects article{
-        flex-basis: 49%;
         height: auto;
         overflow: hidden;
         min-height: 400px;
@@ -64,7 +55,6 @@
     .projects article{
         height: auto;
         flex-basis: 100%;
-        margin-left: 0%;
-        margin-right: 0%;
+        margin: 1rem 0;
     }
 }

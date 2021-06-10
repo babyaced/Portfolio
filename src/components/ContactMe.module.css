@@ -89,3 +89,9 @@
 .invalid {
     background-color: #fddde6;
 }
+
+@media (max-width: 1116px){
+    .contact{
+        order: 2;
+    }
+}
