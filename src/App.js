@@ -29,29 +29,23 @@ import PandasLogo from './assets/logos/pandas_secondary.svg'
 import ScikitLearnLogo from './assets/logos/scikit-learn-logo-notext.png'
 import YelpProjectScreenshot from './assets/images/YelpProjectPic.png'
 
-import useWindowSize from './hooks/useWindowSize.js'
-
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
-import DemoCard from './components/DemoCard';
 import ConditionalWrapper from './components/ConditionalWrapper';
 
 import CSSLogo from './assets/logos/icons8-css3.svg'
 import HTMLLogo from './assets/logos/icons8-html-5.svg'
 import PortfolioScreenshot from './assets/images/PortfolioScreenshot.png'
 
+import useWindowSize from './hooks/useWindowSize.js'
+
 function App() {
 
   const windowSize = useWindowSize();
-
   return (
-    <BrowserRouter>
     <div className={styles.app}>
       <ConditionalWrapper condition={windowSize.width >= 1116}>
           <AboutMe/>
-          <ContactMe key="contactMeForm"/>
+          <ContactMe/>
       </ConditionalWrapper>
-      <Switch>
-        <Route exact path='/'>
           <div className={styles.projects}>
             
               <ProjectCard 
@@ -66,7 +60,7 @@ function App() {
                   projectRepo={'https://github.com/babyaced/Portfolio'} 
                   projectTechStack={{'React':ReactLogo, 'CSS3':CSSLogo, 'HTML5': HTMLLogo}}
                   style={{backgroundImage: `url(${PortfolioScreenshot})`, backgroundPosition: '70% 0%'}}
-                  projectLink={"https://zooble.link"}
+                  projectLink={"https://danielsimpson.dev"}
                 />
               <ProjectCard 
                   projectTitle={'iOS Music Streaming App'} 
@@ -90,13 +84,7 @@ function App() {
                   demoVideo={FileSystemDemo}
                 />
           </div>
-        </Route>
-        <Route path="/demos/:videoPath">
-          <DemoCard/>
-        </Route>
-        </Switch>
       </div>
-    </BrowserRouter>
   );
 }
 

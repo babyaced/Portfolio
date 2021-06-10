@@ -2,8 +2,6 @@ import {useState} from 'react'
 
 import styles from './ProjectCard.module.css'
 
-import VideoModal from './VideoModal.js'
-
 function ProjectCard({projectTitle, projectRepo, projectTechStack, style, projectLink, demoVideo}) {
 
     const [showModal, setShowModal] = useState(false); 
