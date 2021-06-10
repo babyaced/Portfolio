@@ -23,7 +23,6 @@
     display: flex;
     flex-flow: row wrap;
     margin-left: 1%;
-    justify-content: flex-end;
 }
 
 .projects article{

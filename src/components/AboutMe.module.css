@@ -6,24 +6,16 @@
     /* background-color: var(--color-primary-400); */
     background-color: rgb(69, 89, 140, .95);
     color: white;
+    height: 34%;
+    overflow: hidden;
+    margin-bottom: 2%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
 }
 
 .aboutMe p::after{
     content: " on the right";
-}
-
-.about{
-    height: 34%;
-    overflow: hidden;
-    margin-bottom: 2%;
-}
-
-
-
-.about{
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
 }
 
 .socialLinks{
@@ -50,6 +42,11 @@
 @media (max-width: 1116px){
     .aboutMe p::after{
         content: " down below";
+    }
+
+    .about{
+        height: 100%;
+        margin: 0;
     }
 }
 

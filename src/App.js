@@ -35,6 +35,10 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import DemoCard from './components/DemoCard';
 import ConditionalWrapper from './components/ConditionalWrapper';
 
+import CSSLogo from './assets/logos/icons8-css3.svg'
+import HTMLLogo from './assets/logos/icons8-html-5.svg'
+import PortfolioScreenshot from './assets/images/PortfolioScreenshot.png'
+
 function App() {
 
   const windowSize = useWindowSize();
@@ -49,13 +53,7 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <div className={styles.projects}>
-              <ProjectCard 
-                  projectTitle={'iOS Music Streaming App'} 
-                  projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
-                  projectTechStack={{'Swift':SwiftLogo,'Firebase': FirebaseLogo}}
-                  style={{backgroundImage: `url(${MusicPlayerProjectScreenshot})`, backgroundPosition: '10% 0%'}}
-                  demoVideo={MusicPlayerDemo}
-              />
+            
               <ProjectCard 
                   projectTitle={'Zooble: Pet Owner Social Media'} 
                   projectRepo={'https://github.com/babyaced/CSC648-Final-Project'} 
@@ -63,6 +61,20 @@ function App() {
                   style={{backgroundImage: `url(${ZoobleScreenshot})`, backgroundPosition: '70% 0%'}}
                   projectLink={"https://zooble.link"}
                 />
+              <ProjectCard 
+                  projectTitle={'This Portfolio'} 
+                  projectRepo={'https://github.com/babyaced/Portfolio'} 
+                  projectTechStack={{'React':ReactLogo, 'CSS3':CSSLogo, 'HTML5': HTMLLogo}}
+                  style={{backgroundImage: `url(${PortfolioScreenshot})`, backgroundPosition: '70% 0%'}}
+                  projectLink={"https://zooble.link"}
+                />
+              <ProjectCard 
+                  projectTitle={'iOS Music Streaming App'} 
+                  projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
+                  projectTechStack={{'Swift':SwiftLogo,'Firebase': FirebaseLogo}}
+                  style={{backgroundImage: `url(${MusicPlayerProjectScreenshot})`, backgroundPosition: '10% 0%'}}
+                  demoVideo={MusicPlayerDemo}
+              />
                 <ProjectCard 
                   projectTitle={'Yelp Rating Predictor'} 
                   projectRepo={'https://github.com/babyaced/MyMusicOnline'} 
@@ -83,7 +95,6 @@ function App() {
           <DemoCard/>
         </Route>
         </Switch>
-        {/* {windowSize.width < 1116 && <ContactMe style={{margin: '1rem 2%'}}/>} */}
       </div>
     </BrowserRouter>
   );
