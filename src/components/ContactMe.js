@@ -67,7 +67,7 @@ function ContactMe({style}) {
         }
 
         if (!email){
-            emailErr = "Please enter a Email"
+            emailErr = "Please enter an Email"
         }
 
         if (!subject){
@@ -78,7 +78,7 @@ function ContactMe({style}) {
             messageErr = "Please enter a Message"
         }
 
-        if(!email.includes('@')){
+        if(!email.includes('@') && email){
             emailErr = 'Invalid Email';
         }
 
