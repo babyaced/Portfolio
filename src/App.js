@@ -46,11 +46,11 @@ function App() {
         </div>
         <div className={styles.projects}>
             <ProjectCard 
-                projectTitle={'Zooble: Pet Owner Social Media'} 
-                projectRepo={'https://github.com/babyaced/CSC648-Final-Project'} 
+                projectTitle={'Zoou: Pet Owner Social Media'} 
+                projectRepo={'https://github.com/babyaced/Zoou'} 
                 projectTechStack={{'React':ReactLogo, 'Node.js':NodeJSLogo, 'MySQL': MySQLLogo,'Amazon Web Services': AWSLogo,'Google Maps API': GoogleMapsLogo}}
                 style={{backgroundImage: `url(${ZoobleScreenshot})`, backgroundPosition: '70% 0%'}}
-                projectLink={"https://zooble.link"}
+                projectLink={"https://zoou.app"}
               />
             <ProjectCard 
                 projectTitle={'This Portfolio'} 

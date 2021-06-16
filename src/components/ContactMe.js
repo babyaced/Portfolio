@@ -23,8 +23,6 @@ function ContactMe({style}) {
     function sendEmail(e) {
         e.preventDefault();
 
-
-
         const isValid = validate();
 
         if(isValid){
@@ -115,30 +113,18 @@ function ContactMe({style}) {
         <>
             <form className={styles.contactMeForm} onSubmit={sendEmail} style={style}>
                 <h2>Contact Me</h2>
-                <div>
-                    <label for="name">Your Name </label>
-                    <span>{nameError}</span>
-                    {!nameError ? <input type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/> :  <input className={styles.invalid} type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>}
-                    
-                </div>
-                <div>
-                    <label for="email">Your Email</label>
-                    <span>{emailError}</span>
-                    {!emailError ?  <input type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/> : <input className={styles.invalid} type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/>}
-                    
-                </div>
-                <div>
-                    <label for="subject">Subject</label>
-                    <span>{subjectError}</span> 
-                    {!subjectError ? <input type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/> : <input className={styles.invalid} type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/>}
-                    
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <span>{messageError}</span>
-                    {!messageError ? <textarea className="message-input" name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/> : <textarea className={styles.invalid} name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/>}
-                    
-                </div>
+                <label for="name">Your Name </label>
+                <span>{nameError}</span>
+                {!nameError ? <input type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/> :  <input className={styles.invalid} type="text" name="name" placeholder="Name" id="name" value={name} onChange={(e) =>setName(e.target.value)}/>}
+                <label for="email">Your Email</label>
+                <span>{emailError}</span>
+                {!emailError ?  <input type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/> : <input className={styles.invalid} type="email" name="email" placeholder="Email" id="email" value={email} onChange={(e) =>setEmail(e.target.value)}/>}
+                <label for="subject">Subject</label>
+                <span>{subjectError}</span> 
+                {!subjectError ? <input type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/> : <input className={styles.invalid} type="text" name="subject" placeholder="Subject" id="subject" value={subject} onChange={(e) =>setSubject(e.target.value)}/>}
+                <label for="message">Message</label>
+                <span>{messageError}</span>
+                {!messageError ? <textarea className="message-input" name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/> : <textarea className={styles.invalid} name="message" placeholder="Message" id="message" value={message} onChange={(e) =>setMessage(e.target.value)}/>}
                 <input type="submit" value="Send"  className="submit-button"/>
             </form>
                 { sendMessageSuccess ?
