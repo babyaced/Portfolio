@@ -31,6 +31,7 @@
 
 .contactMeForm input[type="submit"]{
     align-self: flex-end;
+    box-shadow: var(--elevation-1);
 }
 
 .contactMeForm div{
