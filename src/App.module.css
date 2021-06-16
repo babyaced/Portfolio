@@ -107,3 +107,10 @@
         margin: 1rem 0;
     }
 }
+
+@media (max-height: 768px){
+    .app{
+        height: 100%;
+        overflow: auto;
+    }
+}

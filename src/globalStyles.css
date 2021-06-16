@@ -13,8 +13,13 @@
     --color-neutral-500: #1A1B1E;
 
     /*Typography*/
-    --font-family-header: 'Mulish', sans-serif;
-    --font-family-body: 'Khula', sans-serif;
+    /* --font-family-header: 'Mulish', sans-serif;
+    --font-family-body: 'Khula', sans-serif; */
+
+    --font-family-header: 'Open Sans', sans-serif;
+    --font-family-body: 'Yantramanav', sans-serif;
+
+
 
     /*Shadows*/
     --elevation-0: none;
@@ -80,8 +85,18 @@ body{
     font-family: var(--font-family-body);
 }
 
+a{
+    font-family: var(--font-family-body);
+}
+
 @media (max-width: 768px){
     :root{
         --base-size: .8em;
+    }
+}
+
+@media (max-height: 768px){
+    body{
+        overflow: auto;
     }
 }

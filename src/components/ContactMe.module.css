@@ -1,12 +1,14 @@
 .contactMeForm{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
+    width: 100%;
+    justify-content: stretch;
 }
 
 .contactMeForm h2,
 .contactMeForm input,
 .contactMeForm textarea{
-    flex-basis: 100%;
+    width: 100%;
     resize: none;
 }
 
@@ -20,7 +22,6 @@
 
 .contactMeForm input,
 .contactMeForm textarea{
-    flex-basis: 100%;
     border-radius: 7.5px;
     border-style: solid;
     padding:0.25rem 0.5rem;
@@ -28,10 +29,12 @@
     font-size: var(--text-sm);
 }
 
-
+.contactMeForm input[type="submit"]{
+    align-self: flex-end;
+    box-shadow: var(--elevation-1);
+}
 
 .contactMeForm div{
-    flex-basis: 100%;
     display: flex;
     flex-flow: row wrap;
 }
@@ -43,7 +46,7 @@
 .contactMeForm textarea{
     padding:0.5rem;
     overflow-y: auto;
-    min-height: 200px;
+    flex: 2 0 auto;
 }
 
 .contactMeForm label{
@@ -53,7 +56,6 @@
 
 /*Send Button*/
 .contactMeForm input[type=submit]{
-    flex-basis: 33%;
     max-width: 200px;
     margin-left: auto;
     border: none;
@@ -72,7 +74,6 @@
 @supports(backdrop-filter: blur(3px)){
     .contactMeForm{
         backdrop-filter: blur(3px);
-        
     }
 }
 
