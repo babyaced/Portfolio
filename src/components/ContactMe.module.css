@@ -45,7 +45,7 @@
 .contactMeForm textarea{
     padding:0.5rem;
     overflow-y: auto;
-    flex: 2 1 300px;
+    flex: 2 0 auto;
 }
 
 .contactMeForm label{
@@ -73,7 +73,6 @@
 @supports(backdrop-filter: blur(3px)){
     .contactMeForm{
         backdrop-filter: blur(3px);
-        
     }
 }
 
